@@ -8,9 +8,7 @@
 function sum (num1, num2){
   return num1 + num2
 }
-
-let add = sum(10, 15)
-
+console.log(sum(2, 2));
 //////////////////PROBLEM 2////////////////////
 /*
   Create a function called 'greaterThanFive' that takes in a single parameter called 'number'. 
@@ -21,15 +19,14 @@ let add = sum(10, 15)
 
 
 
-function greaterThanFive(number) {
+const greaterThanFive = function (number) {
   if (number > 5) {
     return "True"
-  } else if (number < 5) {
+  } else {
     return "False"
   }
 }
-
-
+console.log(greaterThanFive(6));
 //////////////////PROBLEM 3////////////////////
 /*
   Create a function called 'findZWords' that takes in one parameter, 'word'. 
@@ -38,13 +35,13 @@ function greaterThanFive(number) {
   If the name does not begin with Z, return the string: 'the name does not begin with Z'.
 */
 
-function findZWords(word){
-  if (word === 'Z'){
-    return('the name begins with Z')
-} else if(word === 'Does not begin with Z'){
-  return ('the name does not begin with Z')
-}
-}
+const findZWords = function (word) {
+  if (word.toLowerCase().startsWith("z")){
+    return ('the name begins with Z')
+  } else {
+  return ('the name does not begin with Z');
+  }
+};
 
 //////////////////PROBLEM 4////////////////////
 /*
@@ -54,9 +51,8 @@ function findZWords(word){
 */
   
 
-function iLove(name,love) {
-  if (name = 'Joseph')
-  if ( love = 'music')
+const iLove = (name,love) => {
   return(`${name} loves ${love}`)
 }
 
+console.log(iLove("Matt", "Maddie"));

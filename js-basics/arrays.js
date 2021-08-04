@@ -3,7 +3,7 @@
 
 const faveColors = ['red', 'green', 'black']
 
-const colorCopy = faveColors.slice(0,1)
+const colorCopy = faveColors.slice()
 
 //////////////////PROBLEM 2////////////////////
 /* Add a fourth color to the end of the 'colorCopy' array using the push method. */
@@ -16,9 +16,11 @@ faveColors.push('blue')
   numbers array that will capture only the middle numbers (2, 3, 4).
 */
 
-const numbers = [1, 2, 3, 4, 5]
+const numbers = [1, 2, 3, 4, 5];
 
-const middleNums = numbers.slice(1,2,3)
+const middleNums = numbers.slice(1, 4);
+
+console.log(middleNums)
 
 //////////////////PROBLEM 4////////////////////
 /* 

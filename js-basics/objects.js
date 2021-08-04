@@ -14,14 +14,17 @@
   For example: 'Hello! My name is Rubber Duck and I live in Utah"
 */
 
-let me = {
+const me = {
   firstName: "Matthew",
   state: "Utah",
   age: 22,
-  greeter: "Greeting"
+  greeter: function() {
+    return `Hello! My name is ${this.firstName} and I live in ${this.state}`
+  }
 };
-
-  console.log(`Hello! My name is ${firstName} and I live in ${state}`)
+  let firstName = "Matthew"
+  let state = "Utah"
+  console.log(me.greeter())
 
 //////////////////PROBLEM 2////////////////////
 /*
@@ -49,18 +52,39 @@ let me = {
 
 //CODE HERE
 
-function carFactory(make, model, year) {
-  this.make = make;
-  this.model = model;
-  this.year = year;
+const carFactory = (make, model, year) => {
+  let car = {
+    make: make,
+    model: model,
+    year: year
+  };
+
+  if (car.year > 2018) {
+  car.isNew = true;
+} else {
+  car["isNew"] = false;
 }
 
-checkCarY(); {
-  if (this.year > 2018){
-    console.log("True")
-    isNew === true
-  } else if (isNew === false){
-    isNew === false
-  }
-} 
+  return car;
+};
 
+console.log(carFactory("Audi", "R8", 2021));
+
+function carFactory(make, model, year){
+  let car = {};
+  if(make){
+    car.make = make
+  }
+  if (model) {
+    car.model = model
+  }
+  if (year) {
+    car.year = year
+  }
+  if(car.year > 2018) {
+    car.isNew = true;
+  } else {
+    car.isNew = false;
+  }
+  return car
+}
